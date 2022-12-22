@@ -14,6 +14,6 @@ RUN wget https://github.com/bazelbuild/bazelisk/releases/download/v1.15.0/bazeli
 
 # Install Rust
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-RUN rustup target add wasm32-unknown-unknown
+RUN $HOME/.cargo/bin/rustup target add wasm32-unknown-unknown
 
 ARG USERNAME=vscode
